@@ -30,14 +30,6 @@
     display: inline-block;
 }
 
-.gallery-img {
-    transition: transform 0.3s ease;
-}
-
-.gallery-link:hover .gallery-img {
-    transform: scale(1.05);
-}
-
 .gallery-overlay {
     position: absolute;
     top: 0;
@@ -47,7 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .gallery-overlay span {
@@ -55,5 +47,33 @@
     font-size: 1.5rem;
     text-align: center;
     padding: 10px;
+}
+
+
+/*bg*/
+.cafe-bg {
+    background-image: url('../img/dedia/20240515_093049.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+    position: relative;
+    color: #fff; /* Para que el texto sea visible sobre la imagen de fondo */
+}
+
+.cafe-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cafe-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Añade una superposición oscura */
+    z-index: 1;
 }
 
