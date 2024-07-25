@@ -25,7 +25,7 @@
 }
 
 
-/*bg*/
+/*cafe-bg*/
 .cafe-bg {
     background-image: url('../img/dedia/20240515_093049.jpg');
     background-size: cover;
@@ -63,35 +63,81 @@
     opacity: 1; /* Quita la transparencia al hacer hover */
 }
 
-.img-container {
+.btn-custom {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
     position: relative;
-    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
-.overlay {
+.btn-custom::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo medio transparente */
+    background: #333;
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn-custom:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.btn-custom:hover {
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.img-container:hover .overlay {
-    opacity: 1;
-}
-
-.text {
-    font-size: 1.2em;
-    text-align: center;
 }
 
 
 
+/*bar-bg*/
 
+.bar-bg {
+    background-image: url('../img/denoche/20240522_233619.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+    position: relative;
+    color: #fff; /* Para que el texto sea visible sobre la imagen de fondo */
+}
+
+.bar-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+.bar-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+\.carousel-inner img {
+    height: 500px; /* Ajusta la altura de las imágenes del carrusel */
+    object-fit: cover;
+}
+
+.modal-body .row img {
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s;
+}
+
+.modal-body .row img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse sobre las imágenes */
+}
