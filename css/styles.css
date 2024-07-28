@@ -197,3 +197,50 @@
     width: 100%;
     height: auto;
 }
+
+/*Iconos*/
+/* Cambiar el color de fondo y del texto del footer */
+footer {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+}
+
+/* Cambiar el color de los enlaces dentro del footer */
+footer a {
+    color: #000000; /* Color negro para los enlaces */
+}
+
+/* Cambiar el color de los íconos para que coincidan con el color del texto */
+footer .icon-social i {
+    color: #000000; /* Color negro para los íconos */
+}
+
+/* Ajustar el tamaño de los íconos */
+.icon-social i {
+    font-size: 35px; /* Cambia este valor para ajustar el tamaño de los íconos */
+}
+
+/* Ajustar el espacio entre los íconos */
+.icon-social {
+    margin-right: 15px; /* Cambia este valor para ajustar el espacio entre íconos */
+}
+.icon-social:last-child {
+    margin-right: 0; /* Elimina el margen en el último ícono */
+}
+
+
+/* Estilos para la sección de ubicación */
+#ubicacion {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+}
+
+#ubicacion h2 {
+    color: #ffffff; /* Asegura que el color del título sea blanco */
+}
+
+/* Estilos para el iframe de Google Maps */
+.embed-responsive-item {
+    border: 0; /* Opcional: elimina el borde del iframe si es necesario */
+}
+
