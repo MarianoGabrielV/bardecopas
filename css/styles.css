@@ -76,7 +76,7 @@
     opacity: 1; /* Quita la transparencia al hacer hover */
 }
 
-/* Botón personalizado */
+/* Botón personalizado 
 .btn-custom {
     background: #fff;
     color: #333;
@@ -112,7 +112,47 @@
 .btn-custom:hover {
     color: #fff;
 }
+*/
+/* Botón personalizado */
+.btn-custom {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    width: auto; /* Ancho automático según el contenido */
+    margin: 10px 5px; /* Espaciado horizontal entre botones */
+    display: inline-block; /* Coloca los botones en línea */
+    vertical-align: middle; /* Alineación vertical */
+}
 
+.btn-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn-custom:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.btn-custom:hover {
+    color: #fff;
+}
 
 
 /*bar-bg*/
@@ -126,6 +166,12 @@
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
     color: #fff; /* Para que el texto sea visible sobre la imagen de fondo */
+    padding-top: 50px;
+}
+@media (max-width: 768px) {
+    .bar-bg h3 {
+        padding-top: 15px; /* Ajusta según lo necesario para pantallas pequeñas */
+    }
 }
 
 .bar-bg .container {
